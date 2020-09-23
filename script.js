@@ -2,44 +2,70 @@ function initQuiz() {
         let timeRemaining=0;
     
     
-    const questions = [
+    let questions = [
         {
-            title: "",
-            choices: [],
-            answer: ""
+            title: "Question 1: What tag is used to specify a section of text that provides an example of computer code?",
+            choices: ["caption", "code", "!DOCTYPE", "embed"],
+            answer: "code"
         },
         {
-            title: "",
-            choices: [],
-            answer: ""
+            title: "Question 2: What tag can be used to insert a line break or blank line in an HTML document?",
+            choices: ["br", "body", "head", "title"],
+            answer: "br"
         },
         {
-            title: "",
-            choices: [],
-            answer: ""
+            title: "Question 3: What tag is used to define a standard cell inside a table?",
+            choices: ["td", "h1", "button", "footer"],
+            answer: "td"
         },
         {
-            title: "",
-            choices: [],
-            answer: ""
+            title: "Question 4: What element is a container for all the head elements, and may include the document title, scripts, styles, meta information, and more?",
+            choices: ["head", "br", "body", "title"],
+            answer: "head"
         },
         {
-            title: "",
-            choices: [],
-            answer: ""
+            title: "Question 5: What is the CSS property that is used to specify the edges of a table?",
+            choices: ["Fill", "Boxes", "Margins", "Borders"],
+            answer: "Borders"
+        },
+        {
+            title: "Question 6: What is the CSS property that sets the size of the whitespace outside the borders of the content?",
+            choices: ["Line", "Spacer", "Margin", "Block-level"],
+            answer: "Margin"
+        },
+        {
+            title: "Question 7: What is the name of the property used to specify the effects displayed behind all elements on a page?",
+            choices: ["Bottom Layer", "Background", "Border", "Transparency"],
+            answer: "Background"
+        },
+        {
+            title: "Question 8: What is the element used – and hidden – in code that explains things and makes the content more readable?",
+            choices: ["Comparisons", "Comments", "Quotations", "Notes"],
+            answer: "Comments"
+        },
+        {
+            title: "Question 9: What is the object called that lets you work with both dates and time-related data?",
+            choices: ["Dates", "Time-warp", "Time field", "Clock"],
+            answer: "Dates"
+        },
+        {
+            title: "Question 10: What is a JavaScript element that represents either TRUE or FALSE values?",
+            choices: ["Boolean", "RegExp", "Condition", "Event"],
+            answer: "Boolean"
         }
+        
     ];
         
-        const startButtonEl = document.getElementById("start-button");
-        const timeRemainingEl = document.getElementById("time-remaining");
-        const finalScoreEl = document.getElementById("final-score");
-        const numQuestions = questions.length;
-        const landingContainerEl = document.getElementById("landing-container");
-        const quizContainerEl = document.getElementById("quiz-container");
-        const finalContainerEl = document.getElementById("final-container");
-        const submitButtonEl = document.getElementById("submit-initials");
-        const highscoreButtonEl = document.getElementById("highscore-button");
-        const highscoreContainerEl = document.getElementById("highscore-container");
+        let startButtonEl = document.getElementById("start-button");
+        let timeRemainingEl = document.getElementById("time-remaining");
+        let finalScoreEl = document.getElementById("final-score");
+        let numQuestions = questions.length;
+        let landingContainerEl = document.getElementById("landing-container");
+        let quizContainerEl = document.getElementById("quiz-container");
+        let finalContainerEl = document.getElementById("final-container");
+        let submitButtonEl = document.getElementById("submit-initials");
+        let highscoreButtonEl = document.getElementById("highscore-button");
+        let highscoreContainerEl = document.getElementById("highscore-container");
         let highScores = [];
            
         if (JSON.parse(localStorage.getItem('scores')) !== null) {
