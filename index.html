@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Speed Quiz_D!</title>
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+
+    <!-- JS Scripts -->
+    <script src="./questions.js"></script>
+    <script src="./script.js"></script>
+
+</head>
+
+    <body style="background-color: lightgrey;">
+        <!-- Navigation bar -->
+     <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="https://davidyi0529.github.io/Portfolio_D/index.html">
+          <img src="https://github.com/davidyi0529/Portfolio_D/blob/master/assets/images/logo.png?raw=true" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+          Speed Quiz_D
+        </a>
+    
+    </nav>
+        <!-- High Score -->
+    <div class="top-container">
+        <div class="row w-100">
+            <div class="col-4 col-md-2 mt-4 mb-4">
+                <button type="button" id="highscore-button" class="btn btn-info">View High Scores</button> 
+            </div>
+            <div class="col-3 col-md-7"></div>
+            <div class="col-5 col-md-3">
+                <!-- Time Remaining -->
+                <form>
+                    <div class="form-group row">
+                        <label for="time-remaining" class="col-sm-7 mt-4 mb-4 col-form-label">Time Remaining</label>
+                        <div class="col-sm-5 mt-4 mb-4">
+                            <input type="number" readonly class="form-control" id="time-remaining" placeholder="0">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    <div id="landing-container" class="container"></div>
+        <!-- Header -->        
+        <div class="row mb-3">
+            <div class="col-12 text-center">
+                <h1>Speed Quiz</h1>
+            </div>
+        </div>
+        <!-- Instructions -->
+        <div class="row mb-3">
+            <div class="col-12 text-center">
+                <p>Do you have what it takes to answer all the questions before the timer runs out?! Answer incorrectly and 15 sec will be deducted. Your Final Score will be based on your remaining time when all the questions are answered.</p>
+            </div>
+        </div>
+        <!-- Start Button -->
+        <div class="row">
+            <div class="col-12 text-center">
+                <button id="start-button" type="button" class="btn btn-secondary btn-lg">Start Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    </body>
+
+</html>
