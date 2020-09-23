@@ -7,47 +7,45 @@
 
     <title>Speed Quiz_D!</title>
 
-    <!-- CSS Links -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./style.css">
 
-    <!-- JS Scripts -->
-    <script src="./questions.js"></script>
-    <script src="./script.js"></script>
-
 </head>
 
-    <body style="background-color: lightgrey;">
-        <!-- Navigation bar -->
-     <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="https://davidyi0529.github.io/Portfolio_D/index.html">
-          <img src="https://github.com/davidyi0529/Portfolio_D/blob/master/assets/images/logo.png?raw=true" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
-          Speed Quiz_D
-        </a>
-    
-    </nav>
-        <!-- High Score -->
-    <div class="top-container">
-        <div class="row w-100">
-            <div class="col-4 col-md-2 mt-4 mb-4">
-                <button type="button" id="highscore-button" class="btn btn-info">View High Scores</button> 
-            </div>
-            <div class="col-3 col-md-7"></div>
-            <div class="col-5 col-md-3">
-                <!-- Time Remaining -->
-                <form>
-                    <div class="form-group row">
-                        <label for="time-remaining" class="col-sm-7 mt-4 mb-4 col-form-label">Time Remaining</label>
-                        <div class="col-sm-5 mt-4 mb-4">
-                            <input type="number" readonly class="form-control" id="time-remaining" placeholder="0">
+<body>
+
+     <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container navbar-container mx-0">
+            <a class="navbar-brand" href="https://davidyi0529.github.io/Portfolio_D/index.html">
+                <img src="https://github.com/davidyi0529/Portfolio_D/blob/master/assets/images/logo.png?raw=true" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy">
+                Speed Quiz_D
+              </a>
+              <!-- High Score -->
+                <div class="row w-100"></div>
+                <div class="col-8 col-md-8 ml-5">
+                    <button type="button" id="highscore-button" class="btn btn-secondary btn btn-outline-light">View Highscores</button> 
+                </div>
+                <div class="col-3 col-md-7"></div>
+                <div class="col-5 col-md-3">
+                    
+                    <!-- Time Remaining -->
+                    <form>
+                        <div class="form-group row">
+                            <label for="time-remaining" class="col-sm-7 col-form-label text-light bg-dark btn btn-outline-light">Available Time</label>
+                            <div class="col-sm-5">
+                                <input type="number" readonly class="form-control" id="time-remaining" placeholder="0">
+                            </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
+    </nav>
 
-    <div id="landing-container" class="container"></div>
-        <!-- Header -->        
+    <!-- Header --> 
+    <div id="landing-container" class="container">
         <div class="row mb-3">
             <div class="col-12 text-center">
                 <h1>Speed Quiz</h1>
@@ -56,7 +54,7 @@
         <!-- Instructions -->
         <div class="row mb-3">
             <div class="col-12 text-center">
-                <p>Do you have what it takes to answer all the questions before the timer runs out?! Answer incorrectly and 15 sec will be deducted. Your Final Score will be based on your remaining time when all the questions are answered.</p>
+                <p>Do you have what it takes to answer all the questions before the timer runs out?! Answer incorrectly and 10 sec will be deducted. Your Final Score will be based on your remaining time when all the questions are answered.</p>
             </div>
         </div>
         <!-- Start Button -->
@@ -67,6 +65,48 @@
         </div>
     </div>
 
-    </body>
+    <!-- Quiz -->
+    <div id="quiz-container" class="container d-none">
+        
+    </div>
+    
+    <!-- Finish -->
+    <div id="final-container" class="container d-none">
+        <div class="row">
+            <div class="col-12 text-center">
+                <form>
+                    <div class="form-group row">
+                        <label for="final-score" class="col-sm-7 col-form-label">Final Score</label>
+                        <div class="col-sm-5">
+                            <input type="number" readonly class="form-control" id="final-score" placeholder="0">
+                        </div>
+                    </div>
+                </form>
+                <form>
+                    <div class="form-group">
+                      <label for="initials-entry">Initials</label>
+                      <input type="text" class="form-control" id="initials-entry" placeholder="Enter initials">
+                    </div>
+                    <button id="submit-initials" type="button" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="highscore-container" class="container d-none">
+        <div class="row">
+            <div class="col-2"></div>
+            <div id="highscore-table" class="col-8">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2>High Scores</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+    </div>
 
+    <!-- <script src="./questions.js"></script> -->
+    <script src="./script.js"></script>
+</body>
 </html>
