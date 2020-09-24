@@ -74,7 +74,6 @@ function initQuiz() {
     
         function startQuiz() {
             
-            
             landingContainerEl.setAttribute("class","container d-none");
             let rowEl = null;
             let colEl = null;
@@ -99,8 +98,8 @@ function initQuiz() {
                 timeRemainingEl.setAttribute("value",timeRemaining);
             },1000);
             let clickTimeout = false;
-            function generateQuestion(questionNum) {
-                
+            
+        function generateQuestion(questionNum) {                
                 quizContainerEl.innerHTML = "";
                 rowEl = document.createElement("div");
                 rowEl.setAttribute("class","row");
